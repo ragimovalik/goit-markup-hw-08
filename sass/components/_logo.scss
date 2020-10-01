@@ -1,0 +1,24 @@
+.mainlogo {
+  display: block;
+  color: $txt-accent;
+  font-family: $font-family-logo;
+  font-size: $fsz-mainlogo;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  &__nav {
+    margin-right: 93px;
+  }
+
+  &__nav--coloring {
+    color: $txt-black;
+  }
+
+  &__footer {
+    margin-bottom: 20px;
+  }
+
+  &__footer--coloring {
+    color: $txt-white;
+  }
+}

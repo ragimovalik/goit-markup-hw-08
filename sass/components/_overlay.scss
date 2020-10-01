@@ -1,0 +1,25 @@
+.overlay {
+  padding: 63px 24px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background-color: $bgc-button;
+
+  transform: translateY(100%);
+  opacity: 0;
+
+  transition: transform $transition-duration $transition-t-function,
+    opacity $transition-duration $transition-t-function;
+
+  &__text {
+    font-weight: $font-normal;
+    font-size: $fsz-overlay;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    color: $txt-white;
+  }
+}

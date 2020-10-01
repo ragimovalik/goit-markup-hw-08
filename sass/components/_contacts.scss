@@ -1,0 +1,32 @@
+.contacts {
+  display: block;
+
+  color: $txt-white;
+  font-style: normal;
+  font-weight: $font-normal;
+  font-size: $fsz-footer;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  &__text {
+    display: block;
+    margin: 0;
+
+    letter-spacing: inherit;
+    color: $txt-white;
+  }
+
+  &__link {
+    color: $txt-footer-contacts;
+    transition: color $transition-duration $transition-t-function;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $txt-accent;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}

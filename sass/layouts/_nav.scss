@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  align-items: baseline;
+
+  &__list {
+    display: flex;
+    align-items: baseline;
+    list-style-type: none;
+  }
+
+  &__links {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color $transition-duration $transition-t-function;
+
+    color: $txt-black;
+
+    font-weight: $font-medium;
+    font-size: $fsz-header;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  &__links:hover,
+  &__links:focus {
+    color: $txt-accent;
+  }
+
+  &__items {
+    margin-right: 50px;
+    list-style-type: none;
+  }
+
+  &__items:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.subscribing {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    font-weight: $font-bold;
+    font-size: $fsz-footer;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $txt-white;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button > svg {
+    margin-left: 10px;
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    margin: 0 12px 0 0;
+    padding: 0 0 0 16px;
+
+    transition: border $transition-duration $transition-t-function;
+
+    background-color: inherit;
+    color: $txt-white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+  }
+
+  &__input:hover,
+  &__input:focus {
+    border: 1px solid $bgc-primary;
+    outline: transparent;
+  }
+}

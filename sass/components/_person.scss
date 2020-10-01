@@ -1,0 +1,37 @@
+.person {
+  display: block;
+
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: $bgc-primary;
+  }
+
+  &__image {
+    width: 270px;
+    height: auto;
+  }
+
+  &__name {
+    margin: 0 0 10px 0;
+
+    font-weight: $font-medium;
+    font-size: $fsz-person-content;
+    line-height: 1.19;
+    color: $txt-black;
+  }
+
+  &__position {
+    margin: 0 0 16px 0;
+
+    font-weight: $font-normal;
+    font-size: $fsz-person-content;
+    line-height: 1.19;
+    color: $txt-grey;
+  }
+}

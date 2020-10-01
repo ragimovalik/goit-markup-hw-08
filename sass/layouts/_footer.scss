@@ -1,0 +1,39 @@
+.footer {
+  background-color: $bgc-footer;
+
+  &__content--positioning {
+    display: flex;
+    align-items: baseline;
+    padding: 60px 0;
+  }
+
+  &__left {
+    margin-right: 70px;
+  }
+
+  &__join {
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: $font-bold;
+    font-size: $fsz-footer;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $txt-white;
+  }
+
+  &__center .socials__link {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &__center .socials__icon {
+    fill: $bgc-primary;
+  }
+
+  &__center .socials__link:hover,
+  &__center .socials__link:focus {
+    background: $bgc-button;
+  }
+}

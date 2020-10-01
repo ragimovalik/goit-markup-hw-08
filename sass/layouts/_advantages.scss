@@ -1,0 +1,80 @@
+.advantages__list {
+  @extend %list;
+}
+
+//
+//  .advantages {
+//   padding-top: 94px;
+//   padding-bottom: 0;
+
+//   &__list {
+//     display: flex;
+//     padding: 0;
+//     margin: 0;
+//     list-style-type: none;
+//   }
+
+//   &__items {
+//     flex-basis: calc((100%-3 * 30px) / 4);
+//   }
+
+//   &__items:not(:last-child) {
+//     margin-right: 30px;
+//   }
+
+//   &__title::before {
+//     content: "";
+//     display: block;
+//     margin-bottom: 30px;
+//     width: 270px;
+//     height: 120px;
+//     outline: none;
+
+//     background: $bgc-secondary;
+//     border-radius: 4px;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+
+//   &__items:nth-child(1) h3::before {
+//     background-image: url(../images/svg/antenna.svg);
+//     background-size: 70px;
+//   }
+
+//   &__items:nth-child(2) h3::before {
+//     background-image: url(../images/svg/clock.svg);
+//     background-size: 70px;
+//   }
+
+//   &__items:nth-child(3) h3::before {
+//     background-image: url(../images/svg/diagram.svg);
+//     background-size: 70px;
+//   }
+
+//   &__items:nth-child(4) h3::before {
+//     background-image: url(../images/svg/astronaut.svg);
+//     background-size: 70px;
+//   }
+
+//   &__title {
+//     margin-top: 0;
+//     margin-bottom: 10px;
+
+//     font-weight: $font-bold;
+//     font-size: $fsz-advantages-content;
+//     line-height: 1.14;
+//     text-transform: uppercase;
+
+//     color: $txt-black;
+//   }
+
+//   &__text {
+//     margin-top: 0;
+//     margin-bottom: 0;
+
+//     font-weight: $font-normal;
+//     font-size: $fsz-advantages-content;
+//     line-height: 1.71;
+//     color: $txt-grey;
+//   }
+// }

@@ -1,0 +1,75 @@
+.backdrop {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: 500ms;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    transform: scale(0);
+  }
+}
+
+.modal {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+
+  background: $bgc-primary;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%);
+
+  &--closing {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: transparent;
+    border-color: transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: none;
+
+    cursor: pointer;
+
+    background-color: transparent;
+    text-decoration: none;
+    background-image: url(../images/svg/close.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transition: background-image $transition-duration $transition-t-function,
+      transform $transition-duration $transition-t-function;
+  }
+
+  &--closing:hover {
+    background-image: url(../images/svg/close-hover.svg);
+    transform: rotate(180deg);
+  }
+
+  &--closing:focus {
+    background-image: url(../images/svg/close-hover.svg);
+    border: 1px solid $txt-accent;
+  }
+}

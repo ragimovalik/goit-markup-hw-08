@@ -1,0 +1,26 @@
+.button {
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  background-color: $bgc-button;
+  color: $txt-white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: border $transition-duration $transition-t-function;
+
+  font-weight: $font-bold;
+  font-size: $fsz-button;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $txt-white;
+    outline: transparent;
+  }
+}
