@@ -1,6 +1,4 @@
 .contacts {
-  display: block;
-
   color: $txt-white;
   font-style: normal;
   font-weight: $font-normal;
@@ -8,17 +6,9 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  &__text {
-    display: block;
-    margin: 0;
-
-    letter-spacing: inherit;
-    color: $txt-white;
-  }
-
   &__link {
+    @extend %link;
     color: $txt-footer-contacts;
-    transition: color $transition-duration $transition-t-function;
   }
 
   &__link:hover,
@@ -26,7 +16,17 @@
     color: $txt-accent;
   }
 
+  &__link {
+    transition: color $transition-duration $transition-t-function;
+  }
+
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
 }
+
+// .contacts {
+//   &__item:not(:last-child) {
+//     margin-bottom: 9px;
+//   }
+// }

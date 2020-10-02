@@ -2,9 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+
+  @extend %list;
 
   &__item:not(:last-child) {
     margin-right: 10px;
@@ -23,6 +22,12 @@
     background-color: $bgc-primary;
   }
 
+  &__icon {
+    fill: $icons-customers;
+    width: 20px;
+    height: 20px;
+  }
+
   &__link:hover,
   &__link:focus {
     background-color: $bgc-button;
@@ -35,9 +40,5 @@
 
   &__icon {
     transition: fill $transition-duration $transition-t-function;
-
-    fill: $icons-customers;
-    width: 20px;
-    height: 20px;
   }
 }

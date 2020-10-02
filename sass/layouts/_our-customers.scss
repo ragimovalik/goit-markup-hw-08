@@ -1,29 +1,31 @@
 .customers {
-  padding: 94px 0;
-
   &__list {
+    @extend %list;
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-    padding: 0;
-    margin: 0;
   }
 
   &__item {
-    width: 170px;
-    height: 90px;
+    flex-basis: calc((100% - 30px) / 2);
+  }
 
-    list-style-type: none;
+  &__item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+
+  &__item:nth-child(-n + 2) {
+    margin-bottom: 30px;
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 90px;
     border: 1px solid $icons-customers;
     border-radius: 4px;
-    width: 170px;
-    height: 90px;
 
     transition: border $transition-duration $transition-t-function;
   }
@@ -38,13 +40,25 @@
     fill: $bgc-button;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
-
   &__icon {
-    transition: fill $transition-duration $transition-t-function;
-
     fill: $icons-customers;
+    transition: fill $transition-duration $transition-t-function;
   }
 }
+
+// .customers {
+//   padding: 94px 0;
+
+//   &__item {
+//     width: 170px;
+//     height: 90px;
+//   }
+
+//   &__link {
+//     width: 170px;
+//   }
+
+//   &__item:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
