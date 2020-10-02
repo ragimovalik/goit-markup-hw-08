@@ -16,44 +16,51 @@
   </head>
   <body class="body">
     <!--Шапка - лого, навигация, контакты-->
-    <!-- <header class="header">
-      <div class="container header--flexbox">
-        <nav class="nav">
-          <a class="mainlogo mainlogo__nav" href="WebStudio"
-            >Web<span class="mainlogo__nav--coloring">Studio</span></a
-          >
-          <ul class="nav__list">
-            <li class="nav__items">
-              <a class="nav__links current-page" href="./index.html">Студия</a>
+    <header class="header">
+      <div class="header--flexbox">
+        <a class="mainlogo mainlogo__nav" href="WebStudio"
+          >Web<span class="mainlogo__nav--coloring">Studio</span></a
+        >
+        <button type="button" class="header__burger">
+          <svg width="40" height="40" >
+            <use class="burger" href="./images/sprite.svg#burger" />
+            <use class="burger-close" href="./images/sprite.svg#burger-close" />
+          </svg>
+        </button>
+        <div class="header__mobile-menu">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__items">
+                <a class="nav__links current-page" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__items">
+                <a class="nav__links" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__items">
+                <a class="nav__links" href="Контакты">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="address">
+            <li class="address__item">
+              <a class="address__link" href="mailto:info@devstudio.com">
+                <svg class="address__icons" width="16" height="12">
+                  <use href="./images/sprite.svg#email" />
+                </svg>
+                info@devstudio.com</a>
             </li>
-            <li class="nav__items">
-              <a class="nav__links" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__items">
-              <a class="nav__links" href="Контакты">Контакты</a>
+            <li class="address__item">
+              <a class="address__link" href="tel:+380961111111">
+                <svg class="address__icons" width="10" height="16">
+                  <use href="./images/sprite.svg#phone" />
+                </svg>
+                +38 096 111 11 11</a>
             </li>
           </ul>
-        </nav>
-        <ul class="address">
-          <li class="address__item">
-            <a class="address__link" href="mailto:info@devstudio.com">
-              <svg class="address__icons" width="16" height="12">
-                <use href="./images/sprite.svg#email" />
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="address__item">
-            <a class="address__link" href="tel:+380961111111">
-              <svg class="address__icons" width="10" height="16">
-                <use href="./images/sprite.svg#phone" />
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+
+        </div>
       </div>
-    </header> -->
+    </header>
     <!--Основная информация-->
     <main>
       <!--Основная услуга с кнопкой-->
@@ -570,12 +577,12 @@
     </footer>
 
     <!-- Modal window -->
-    <!-- <div class="backdrop backdrop--hidden" data-modal>
+    <div class="backdrop backdrop--hidden" data-modal>
       <div class="modal">
-        <button type="submit" class="modal--closing" data-modal-close></button> -->
+        <button type="submit" class="modal--closing" data-modal-close></button>
 
     <!-- Modal Window - FORM -->
-    <!-- <form class="form">
+    <form class="form">
           <b class="form__title"> Оставьте свои данные, мы вам перезвоним </b>
 
           <label class="form__label" for="name">Имя</label>
@@ -634,6 +641,6 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,21 +1,13 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  @extend %list;
 }
 
 .project {
-  flex-basis: calc((100% - 60px) / 3);
+  width: 100%;
 
   transition: box-shadow $transition-duration $transition-t-function;
 
-  &:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-
-  &:not(:nth-last-child(-n + 3)) {
+  &:not(:last-child) {
     margin-bottom: 30px;
   }
 
@@ -26,9 +18,8 @@
   }
 
   &__link {
+    @extend %link;
     display: block;
-    text-decoration: none;
-    outline: none;
   }
 
   &__title {
@@ -40,6 +31,17 @@
     letter-spacing: 0.06em;
 
     color: $txt-black;
+  }
+
+  &__type {
+    margin: 0;
+    padding: 0;
+
+    font-weight: $font-normal;
+    font-size: $fsz-projects-type;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: $txt-grey;
   }
 
   &__type {
@@ -72,3 +74,26 @@
     opacity: 1;
   }
 }
+
+// .projects {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .project {
+//   flex-basis: calc((100% - 60px) / 3);
+
+//   transition: box-shadow $transition-duration $transition-t-function;
+
+//   &:not(:nth-child(3n)) {
+//     margin-right: 30px;
+//   }
+
+//   &:not(:nth-last-child(-n + 3)) {
+//     margin-bottom: 30px;
+//   }
+//   &__link {
+//     display: block;
+//     text-decoration: none;
+//     outline: none;
+//   }
