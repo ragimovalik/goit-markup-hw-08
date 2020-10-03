@@ -21,22 +21,32 @@
         <a class="mainlogo mainlogo__nav" href="WebStudio"
           >Web<span class="mainlogo__nav--coloring">Studio</span></a
         >
-        <button type="button" class="header__burger">
-          <svg width="40" height="40">
+        <button
+          type="button"
+          class="header__burger"
+          data-menu-burger
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="переключатель мобильного меню"
+          >
             <use class="burger" href="./images/sprite.svg#burger" />
             <use class="burger-close" href="./images/sprite.svg#burger-close" />
           </svg>
         </button>
-        <div class="header__mobile-menu">
+        <div class="mobile-menu" id="mobile-menu" data-menu>
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__items">
-                <a class="nav__links current-page" href="./index.html"
-                  >Студия</a
-                >
+                <a class="nav__links" href="./index.html">Студия</a>
               </li>
               <li class="nav__items">
-                <a class="nav__links" href="./portfolio.html">Портфолио</a>
+                <a class="nav__links current-page" href="./portfolio.html"
+                  >Портфолио</a
+                >
               </li>
               <li class="nav__items">
                 <a class="nav__links" href="Контакты">Контакты</a>
@@ -64,7 +74,6 @@
         </div>
       </div>
     </header>
-
     <!-- Основная информация страницы -->
     <main>
       <div class="container portfolio">
@@ -368,5 +377,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/burger.js"></script>
   </body>
 </html>

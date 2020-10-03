@@ -1,73 +1,72 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 15px;
+
   border-bottom: 1px solid #ececec;
   background-color: $bgc-primary;
 
-  padding: 16px 15px;
-
-  &__mobile-menu {
-    display: none;
-  }
+  z-index: 8;
 
   &--flexbox {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
   }
 
   &__burger {
-    display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
   }
-  &__burger:hover .burger {
+
+  &__burger:hover .burger,
+  &__burger:focus .burger {
     fill: $txt-accent;
+  }
+
+  &__burger .burger-close {
+    display: none;
+  }
+
+  &__burger.is-open .burger-close {
+    display: block;
+  }
+
+  &__burger.is-open:hover .burger-close,
+  &__burger.is-open:focus .burger-close {
+    fill: $txt-accent;
+  }
+
+  &__burger.is-open .burger {
+    display: none;
   }
 }
 
+.mobile-menu {
+  display: none;
 
-// @extend %list;
-// @extend %link;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 19;
+  width: 100%;
 
-// .address {
-//   display: flex;
-//   align-items: baseline;
-//   margin-left: auto;
-//   list-style-type: none;
+  padding: 60px 0;
 
-//   &__link {
-//     display: flex;
-//     align-items: center;
+  text-align: center;
+  background-color: $bgc-primary;
 
-//     transition: color $transition-duration $transition-t-function;
+  border-top: 1px solid #ececec;
 
-//     color: $txt-grey;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 
-//     font-weight: $font-medium;
-//     font-size: $fsz-header;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-//   }
-
-//   &__link:hover,
-//   &__link:focus {
-//     color: $txt-accent;
-//   }
-
-//   &__link:hover &__icons,
-//   &__link:focus &__icons {
-//     fill: $txt-accent;
-//   }
-
-//   &__item:first-child {
-//     margin-right: 30px;
-//   }
-
-//   &__icons {
-//     width: 16px;
-//     height: 12px;
-//     margin-right: 10px;
-//     fill: currentColor;
-//   }
-// }
+  &.is-open {
+    display: block;
+  }
+}
