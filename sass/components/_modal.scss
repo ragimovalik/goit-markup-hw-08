@@ -5,6 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  padding-top: 93px;
 
   background-color: rgba(0, 0, 0, 0.2);
 
@@ -25,7 +26,6 @@
   position: relative;
   top: 50%;
   left: 50%;
-  width: calc(100% - 30px);
   height: auto;
 
   background: $bgc-primary;
@@ -34,6 +34,14 @@
   border-radius: 4px;
 
   transform: translate(-50%, -50%);
+
+  @media screen and (max-width: $till-tablet) {
+    width: calc(100% - 30px);
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 450px;
+  }
 
   &--closing {
     display: block;

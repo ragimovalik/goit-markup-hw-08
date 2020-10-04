@@ -2,7 +2,13 @@
   @extend %list;
 
   &__item {
-    margin-bottom: 16px;
+    @media screen and (max-width: $till-tablet) {
+      margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
@@ -15,9 +21,16 @@
 
     color: $txt-grey;
     font-weight: $font-medium;
-    font-size: $fsz-header-mobile;
     line-height: 1.17;
     letter-spacing: 0.02em;
+
+    @media screen and (max-width: $till-tablet) {
+      font-size: $fsz-header-mobile;
+    }
+
+    @media screen and (min-width: $till-tablet) {
+      font-size: $fsz-header;
+    }
   }
 
   &__link:hover,
@@ -37,13 +50,6 @@
     fill: currentColor;
   }
 }
-
-
-// .address {
-//   display: flex;
-//   align-items: baseline;
-//   margin-left: auto;
-//   list-style-type: none;
 
 //   &__link {
 //     display: flex;

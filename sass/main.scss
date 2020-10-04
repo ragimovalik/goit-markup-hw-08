@@ -1,12 +1,13 @@
 @import "./utils/variables";
 @import "./utils/placeholders";
+@import "./utils/breakpoints";
 @import "./base/normalize";
 @import "./base/commons";
 @import "./base/fonts";
 @import "./components/button";
 @import "./components/logo";
 @import "./components/socials";
-@import "./components/current-page";
+// @import "./components/current-page";
 @import "./components/address";
 @import "./components/person";
 @import "./components/contacts";

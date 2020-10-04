@@ -1,14 +1,6 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 16px 15px;
-
   border-bottom: 1px solid #ececec;
   background-color: $bgc-primary;
-
-  z-index: 8;
 
   &--flexbox {
     display: flex;
@@ -16,57 +8,92 @@
     justify-content: space-between;
   }
 
-  &__burger {
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
+  &__container {
+    margin: 0 auto;
+
+    @media screen and (min-width: $mobile) {
+      max-width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding: 21px 15px;
+      max-width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: $desktop;
+    }
   }
 
-  &__burger:hover .burger,
-  &__burger:focus .burger {
-    fill: $txt-accent;
-  }
+  @media screen and (max-width: $till-tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 8;
+    padding: 16px 15px;
 
-  &__burger .burger-close {
-    display: none;
-  }
+    &__burger {
+      margin: 0;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
 
-  &__burger.is-open .burger-close {
-    display: block;
-  }
+    &__burger:hover .burger,
+    &__burger:focus .burger {
+      fill: $txt-accent;
+    }
 
-  &__burger.is-open:hover .burger-close,
-  &__burger.is-open:focus .burger-close {
-    fill: $txt-accent;
-  }
+    &__burger .burger-close {
+      display: none;
+    }
 
-  &__burger.is-open .burger {
+    &__burger.is-open .burger-close {
+      display: block;
+    }
+
+    &__burger.is-open:hover .burger-close,
+    &__burger.is-open:focus .burger-close {
+      fill: $txt-accent;
+    }
+
+    &__burger.is-open .burger {
+      display: none;
+    }
+  }
+}
+
+.header__burger {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
 
-.mobile-menu {
-  display: none;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 19;
-  width: 100%;
-
-  padding: 60px 0;
-
-  text-align: center;
+.menu {
   background-color: $bgc-primary;
 
-  border-top: 1px solid #ececec;
-
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: $till-tablet) {
     display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 19;
+    width: 100%;
+    padding: 60px 0;
+
+    text-align: center;
+    border-top: 1px solid #ececec;
+
+    &.is-open {
+      display: block;
+    }
   }
 
-  &.is-open {
-    display: block;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

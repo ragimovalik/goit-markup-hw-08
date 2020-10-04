@@ -17,7 +17,7 @@
   <body class="body">
     <!--Шапка - лого, навигация, контакты-->
     <header class="header">
-      <div class="header--flexbox">
+      <div class="header--flexbox header__container">
         <a class="mainlogo mainlogo__nav" href="WebStudio"
           >Web<span class="mainlogo__nav--coloring">Studio</span></a
         >
@@ -26,7 +26,7 @@
           class="header__burger"
           data-menu-burger
           aria-expanded="false"
-          aria-controls="mobile-menu"
+          aria-controls="menu"
         >
           <svg
             width="40"
@@ -37,22 +37,21 @@
             <use class="burger-close" href="./images/sprite.svg#burger-close" />
           </svg>
         </button>
-        <div class="mobile-menu" id="mobile-menu" data-menu>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__items">
-                <a class="nav__links" href="./index.html">Студия</a>
-              </li>
-              <li class="nav__items">
-                <a class="nav__links current-page" href="./portfolio.html"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="nav__items">
-                <a class="nav__links" href="Контакты">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+        <div class="menu" id="menu" data-menu>
+          <ul class="nav">
+            <li class="nav__items">
+              <a class="nav__links" href="./index.html">Студия</a>
+            </li>
+            <li class="nav__items">
+              <a class="nav__links current-page" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="nav__items">
+              <a class="nav__links" href="Контакты">Контакты</a>
+            </li>
+          </ul>
+
           <ul class="address">
             <li class="address__item">
               <a class="address__link" href="mailto:info@devstudio.com">
@@ -100,7 +99,7 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img src="./images/portfolio-page-1m.jpg" alt="Технокряк" />
+                <img src="./images/portfolio-page-1.jpg" alt="Технокряк" />
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -119,7 +118,7 @@
             <a class="project__link" href="">
               <div class="project__layer">
                 <img
-                  src="./images/portfolio-page-2m.jpg"
+                  src="./images/portfolio-page-2.jpg"
                   alt="Постер New Orlean vs Golden Star"
                 />
                 <div class="overlay">
@@ -140,7 +139,7 @@
             <a class="project__link" href="">
               <div class="project__layer">
                 <img
-                  src="./images/portfolio-page-3m.jpg"
+                  src="./images/portfolio-page-3.jpg"
                   alt="Ресторан Seafood"
                 />
                 <div class="overlay">
@@ -160,7 +159,7 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img src="./images/portfolio-page-4m.jpg" alt="Проект Prime" />
+                <img src="./images/portfolio-page-4.jpg" alt="Проект Prime" />
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -178,7 +177,7 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img src="./images/portfolio-page-5m.jpg" alt="Проект Boxes" />
+                <img src="./images/portfolio-page-5.jpg" alt="Проект Boxes" />
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -197,7 +196,7 @@
             <a class="project__link" href="">
               <div class="project__layer">
                 <img
-                  src="./images/portfolio-page-6m.jpg"
+                  src="./images/portfolio-page-6.jpg"
                   alt="Inspiration has no Borders"
                 />
                 <div class="overlay">
@@ -218,7 +217,7 @@
             <a class="project__link" href="">
               <div class="project__layer">
                 <img
-                  src="./images/portfolio-page-7m.jpg"
+                  src="./images/portfolio-page-7.jpg"
                   alt="Издание Limited Edition"
                 />
                 <div class="overlay">
@@ -238,7 +237,7 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img src="./images/portfolio-page-8m.jpg" alt="Проект LAB" />
+                <img src="./images/portfolio-page-8.jpg" alt="Проект LAB" />
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -257,7 +256,7 @@
             <a class="project__link" href="">
               <div class="project__layer">
                 <img
-                  src="./images/portfolio-page-9m.jpg"
+                  src="./images/portfolio-page-9.jpg"
                   alt="Growing Business"
                 />
                 <div class="overlay">
@@ -302,7 +301,7 @@
           </address>
         </div>
         <!-- Footer Center -->
-        <div class="footer__subscribing">
+        <div class="footer__join-block">
           <b class="footer__join">присоединяйтесь</b>
           <ul class="socials">
             <li class="socials__item">

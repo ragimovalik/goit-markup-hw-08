@@ -1,6 +1,31 @@
 .advantages {
   &__list {
     @extend %list;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    &__items {
+      width: calc((100% - 30px) / 2);
+    }
+    &__items:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &__items:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &__list {
+      flex-wrap: nowrap;
+    }
+    &__items:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__title {
@@ -64,25 +89,3 @@
     margin-bottom: 10px;
   }
 }
-
-//
-//  .advantages {
-//   padding-top: 94px;
-//   padding-bottom: 0;
-
-//   &__list {
-//     display: flex;
-//     padding: 0;
-//     margin: 0;
-//     list-style-type: none;
-//   }
-
-//   &__items {
-//     flex-basis: calc((100%-3 * 30px) / 4);
-//   }
-
-//   &__items:not(:last-child) {
-//     margin-right: 30px;
-//   }
-
-// }

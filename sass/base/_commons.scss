@@ -1,18 +1,41 @@
 .container {
-  padding: 60px 15px;
   margin: 0 auto;
+
+@media screen and (max-width:$till-desktop) {
+  padding: 60px 15px;
+}
+
+  @media screen and (min-width: $mobile) {
+    max-width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+    padding: 94px 15px;
+  }
 }
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 30px;
 
   text-align: center;
   font-weight: $font-bold;
-  font-size: $fsz-section-title-mobile;
   line-height: 1.17;
-
   color: $txt-black;
+
+  @media screen and (max-width: $till-desktop) {
+    margin-bottom: 30px;
+    font-size: $fsz-section-title-mobile;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-size: $fsz-section-title;
+  }
 }
 
 .body {
@@ -23,8 +46,6 @@
   @media screen and (max-width: 767px) {
     padding-top: 60px;
   }
-
-
 }
 
 img {
@@ -33,7 +54,10 @@ img {
   height: auto;
 }
 
-
+p {
+  margin: 0;
+  padding: 0;
+}
 
 // .container {
 //   width: 1200px;

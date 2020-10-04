@@ -2,19 +2,47 @@
   background-color: $bgc-footer;
   text-align: center;
 
+  &__container {
+    margin: 0 auto;
+    padding: 60px 15px;
+
+    @media screen and (min-width: $mobile) {
+      max-width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+      max-width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: $desktop;
+    }
+  }
+
   &__contacts {
-    margin-bottom: 60px;
+    @media screen and (max-width: $till-desktop) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
   }
 
-  &__subscribing {
-    margin-bottom: 60px;
+  &__join-block {
+    @media screen and (max-width: $till-desktop) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+    }
   }
 
-  &__subscribing .socials__link {
+  &__join-block .socials__link {
     background: rgba(255, 255, 255, 0.1);
   }
 
-  &__subscribing .socials__icon {
+  &__join-block .socials__icon {
     fill: $bgc-primary;
   }
 
@@ -31,14 +59,22 @@
     color: $txt-white;
   }
 
-  &__subscribing .socials__link:hover,
-  &__subscribing .socials__link:focus {
+  &__join-block .socials__link:hover,
+  &__join-block .socials__link:focus {
     background: $bgc-button;
   }
-}
 
-// .footer {
-//   &__contacts {
-//     margin-right: 70px;
-//   }
-// }
+  &__content--positioning {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+}
