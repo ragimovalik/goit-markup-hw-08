@@ -6,11 +6,13 @@
     justify-content: center;
   }
 
-  @media screen and (max-width: $till-tablet) {
+  @media screen and (max-width: $till-desktop) {
     &__list {
       flex-wrap: wrap;
     }
+  }
 
+  @media screen and (max-width: $till-tablet) {
     &__item {
       flex-basis: calc((100% - 30px) / 2);
     }
@@ -25,10 +27,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    &__list {
-      flex-wrap: wrap;
-    }
-
     &__item {
       flex-basis: calc((100% - 60px) / 3);
     }

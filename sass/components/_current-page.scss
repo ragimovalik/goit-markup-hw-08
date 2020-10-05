@@ -1,9 +1,13 @@
 .current-page {
   position: relative;
 
+  @media screen and (max-width: $till-tablet) {
+    padding-bottom: 8px;
+  }
+
   &::after {
     position: absolute;
-    bottom: -8px;
+    bottom: -1px;
     left: 0;
 
     content: "";

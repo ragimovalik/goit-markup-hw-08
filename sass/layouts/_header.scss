@@ -11,12 +11,15 @@
   &__container {
     margin: 0 auto;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile) and (max-width: $till-tablet) {
       max-width: $mobile;
     }
 
     @media screen and (min-width: $tablet) {
-      padding: 21px 15px;
+      padding: 0 15px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $till-desktop) {
       max-width: $tablet;
     }
 

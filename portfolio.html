@@ -5,20 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Портфолио</title>
-    <!-- <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-        /> -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    /> -->
   </head>
   <body class="body">
     <!--Шапка - лого, навигация, контакты-->
     <header class="header">
       <div class="header--flexbox header__container">
-        <a class="mainlogo mainlogo__nav" href="WebStudio"
+        <a class="mainlogo mainlogo__nav" href="./index.html"
           >Web<span class="mainlogo__nav--coloring">Studio</span></a
         >
         <button
@@ -99,7 +91,31 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img src="./images/portfolio-page-1.jpg" alt="Технокряк" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-1.jpg    1x,
+                      ./images/mobile/portfolio-1@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-1.jpg    1x,
+                      ./images/tablet/portfolio-1@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-1.jpg    1x,
+                      ./images/desktop/portfolio-1@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img src="./images/mobile/portfolio-1.jpg " alt="Технокряк" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -117,10 +133,34 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img
-                  src="./images/portfolio-page-2.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-2.jpg    1x,
+                      ./images/mobile/portfolio-2@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-2.jpg    1x,
+                      ./images/tablet/portfolio-2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-2.jpg    1x,
+                      ./images/desktop/portfolio-2@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/mobile/portfolio-2.jpg "
+                    alt="Постер New Orlean vs Golden Star"
+                  />
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -138,10 +178,34 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img
-                  src="./images/portfolio-page-3.jpg"
-                  alt="Ресторан Seafood"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-3.jpg    1x,
+                      ./images/mobile/portfolio-3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-3.jpg    1x,
+                      ./images/tablet/portfolio-3@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-3.jpg    1x,
+                      ./images/desktop/portfolio-3@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/mobile/portfolio-3.jpg "
+                    alt="Ресторан Seafood"
+                  />
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -159,7 +223,34 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img src="./images/portfolio-page-4.jpg" alt="Проект Prime" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-4.jpg    1x,
+                      ./images/mobile/portfolio-4@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-4.jpg    1x,
+                      ./images/tablet/portfolio-4@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-4.jpg    1x,
+                      ./images/desktop/portfolio-4@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/mobile/portfolio-4.jpg "
+                    alt="Проект Prime"
+                  />
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -177,7 +268,35 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img src="./images/portfolio-page-5.jpg" alt="Проект Boxes" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-5.jpg    1x,
+                      ./images/mobile/portfolio-5@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-5.jpg    1x,
+                      ./images/tablet/portfolio-5@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-5.jpg    1x,
+                      ./images/desktop/portfolio-5@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/mobile/portfolio-5.jpg "
+                    alt="Проект Boxes"
+                  />
+                </picture>
+
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -195,10 +314,34 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img
-                  src="./images/portfolio-page-6.jpg"
-                  alt="Inspiration has no Borders"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-6.jpg    1x,
+                      ./images/mobile/portfolio-6@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-6.jpg    1x,
+                      ./images/tablet/portfolio-6@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-6.jpg    1x,
+                      ./images/desktop/portfolio-6@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/mobile/portfolio-6.jpg "
+                    alt="Inspiration has no Borders"
+                  />
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -216,10 +359,34 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img
-                  src="./images/portfolio-page-7.jpg"
-                  alt="Издание Limited Edition"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-7.jpg    1x,
+                      ./images/mobile/portfolio-7@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-7.jpg    1x,
+                      ./images/tablet/portfolio-7@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-7.jpg    1x,
+                      ./images/desktop/portfolio-7@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/mobile/portfolio-7.jpg"
+                    alt="Издание Limited Edition"
+                  />
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -237,7 +404,31 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img src="./images/portfolio-page-8.jpg" alt="Проект LAB" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-8.jpg    1x,
+                      ./images/mobile/portfolio-8@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-8.jpg    1x,
+                      ./images/tablet/portfolio-8@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-8.jpg    1x,
+                      ./images/desktop/portfolio-8@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img src="./images/mobile/portfolio-8.jpg" alt="Проект LAB" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения
@@ -255,10 +446,34 @@
           <li class="project">
             <a class="project__link" href="">
               <div class="project__layer">
-                <img
-                  src="./images/portfolio-page-9.jpg"
-                  alt="Growing Business"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio-9.jpg    1x,
+                      ./images/mobile/portfolio-9@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio-9.jpg    1x,
+                      ./images/tablet/portfolio-9@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio-9.jpg    1x,
+                      ./images/desktop/portfolio-9@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/mobile/portfolio-9.jpg"
+                    alt="Growing Business"
+                  />
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения

@@ -2,11 +2,9 @@
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  
 
   text-align: center;
   background: #c4c4c4;
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -16,22 +14,75 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/main-banner-image.jpg);
+    url(../images/mobile/main-banner.jpg);
 
   @media screen and (min-width: $desktop) {
     max-width: 1600px;
     height: 600px;
   }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mobile/main-banner@2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $till-desktop) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tablet/main-banner.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tablet/main-banner@2x.jpg);
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop/main-banner.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop/main-banner@2x.jpg);
+  }
 
   &__content {
-    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
-    padding: 118px 0;
+
+    @media screen and (max-width: $till-desktop) {
+      max-width: 360px;
+      padding: 118px 0;
+    }
 
     @media screen and (min-width: $desktop) {
-      padding: 200px 0;
       max-width: 696px;
+      padding: 200px 0;
     }
   }
 

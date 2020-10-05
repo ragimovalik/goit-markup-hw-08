@@ -1,15 +1,26 @@
 .address {
   @extend %list;
 
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   &__item {
     @media screen and (max-width: $till-tablet) {
       margin-bottom: 16px;
     }
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: $till-desktop) {
       margin-bottom: 10px;
     }
+
+        @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
   }
+  
 
   &__link {
     @extend %link;
@@ -21,15 +32,16 @@
 
     color: $txt-grey;
     font-weight: $font-medium;
-    line-height: 1.17;
     letter-spacing: 0.02em;
 
     @media screen and (max-width: $till-tablet) {
       font-size: $fsz-header-mobile;
+    line-height: 1.17;
     }
 
-    @media screen and (min-width: $till-tablet) {
+    @media screen and (min-width: $tablet) {
       font-size: $fsz-header;
+    line-height: 1.14;
     }
   }
 
@@ -50,21 +62,3 @@
     fill: currentColor;
   }
 }
-
-//   &__link {
-//     display: flex;
-//     align-items: center;
-
-//     transition: color $transition-duration $transition-t-function;
-
-//     color: $txt-grey;
-
-//     font-weight: $font-medium;
-//     font-size: $fsz-header;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-//   }
-//   &__item:first-child {
-//     margin-right: 30px;
-//   }
-// }
