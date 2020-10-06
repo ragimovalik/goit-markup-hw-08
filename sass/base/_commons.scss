@@ -1,9 +1,9 @@
 .container {
   margin: 0 auto;
 
-@media screen and (max-width:$till-desktop) {
-  padding: 60px 15px;
-}
+  @media screen and (max-width: $till-desktop) {
+    padding: 60px 15px;
+  }
 
   @media screen and (min-width: $mobile) {
     max-width: $mobile;
@@ -58,27 +58,3 @@ p {
   margin: 0;
   padding: 0;
 }
-
-// .container {
-//   width: 1200px;
-// }
-
-// a {
-//   text-decoration: none;
-//   }
-
-// .section-title {
-//   margin-top: 0;
-//   margin-bottom: 50px;
-
-//   text-align: center;
-//   font-weight: $font-bold;
-//   font-size: $fsz-section-title;
-//   line-height: 1.17;
-
-//   color: $txt-black;
-// }
-
-// .portfolio {
-//   padding: 94px 15px;
-// }
