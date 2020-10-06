@@ -1561,6 +1561,11 @@ p {
   .projects {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
     justify-content: center;
   }
 }
