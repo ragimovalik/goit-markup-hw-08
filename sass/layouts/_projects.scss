@@ -14,7 +14,7 @@
     width: 100%;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $till-desktop) {
     flex-basis: calc((100% - 30px) / 2);
 
     &:nth-child(odd) {
@@ -58,6 +58,10 @@
     letter-spacing: 0.06em;
 
     color: $txt-black;
+
+    @media screen and (min-width: $desktop) {
+      width: 320px;
+    }
   }
 
   &__type {

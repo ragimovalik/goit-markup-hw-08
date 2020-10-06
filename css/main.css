@@ -1574,7 +1574,7 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .project {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -1614,6 +1614,12 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .project__title {
+    width: 320px;
+  }
 }
 
 .project__type {
