@@ -411,7 +411,6 @@ p {
 
 .address__link {
   display: flex;
-  justify-content: center;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #757575;
@@ -421,8 +420,15 @@ p {
 
 @media screen and (max-width: 767px) {
   .address__link {
+    justify-content: center;
     font-size: 18px;
     line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address__link {
+    justify-content: flex-start;
   }
 }
 
@@ -443,10 +449,30 @@ p {
 }
 
 .address__icons {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (max-width: 1199px) {
+  .phone {
+    width: 10px;
+    height: 14px;
+  }
+  .email {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .phone {
+    width: 10px;
+    height: 16px;
+  }
+  .email {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .person {
@@ -1162,7 +1188,7 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantages__items {
     width: calc((100% - 30px) / 2);
   }
@@ -1170,6 +1196,12 @@ p {
     margin-right: 30px;
   }
   .advantages__items:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .advantages__items:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -1234,10 +1266,6 @@ p {
   font-size: 14px;
   line-height: 1.71;
   color: #757575;
-}
-
-.advantages__text:not(last-child) {
-  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1199px) {

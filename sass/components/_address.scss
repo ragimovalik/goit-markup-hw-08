@@ -16,16 +16,15 @@
       margin-bottom: 10px;
     }
 
-        @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $desktop) {
       margin-right: 30px;
     }
   }
-  
 
   &__link {
     @extend %link;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 
     transition: color $transition-duration $transition-t-function;
@@ -35,13 +34,18 @@
     letter-spacing: 0.02em;
 
     @media screen and (max-width: $till-tablet) {
+      justify-content: center;
       font-size: $fsz-header-mobile;
-    line-height: 1.17;
+      line-height: 1.17;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $till-desktop) {
+      justify-content: flex-start;
     }
 
     @media screen and (min-width: $tablet) {
       font-size: $fsz-header;
-    line-height: 1.14;
+      line-height: 1.14;
     }
   }
 
@@ -56,9 +60,29 @@
   }
 
   &__icons {
-    width: 16px;
-    height: 12px;
     margin-right: 10px;
     fill: currentColor;
+  }
+}
+
+@media screen and (max-width: $till-desktop) {
+  .phone {
+    width: 10px;
+    height: 14px;
+  }
+  .email {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .phone {
+    width: 10px;
+    height: 16px;
+  }
+  .email {
+    width: 16px;
+    height: 12px;
   }
 }

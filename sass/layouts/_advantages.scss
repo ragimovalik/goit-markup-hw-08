@@ -7,7 +7,7 @@
       flex-wrap: wrap;
     }
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $till-desktop) {
     &__items {
       width: calc((100% - 30px) / 2);
     }
@@ -15,6 +15,12 @@
       margin-right: 30px;
     }
     &__items:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (max-width: $till-tablet) {
+    &__items:not(:last-child) {
       margin-bottom: 30px;
     }
   }
@@ -83,9 +89,5 @@
     font-size: $fsz-advantages-content;
     line-height: 1.71;
     color: $txt-grey;
-  }
-
-  &__text:not(last-child) {
-    margin-bottom: 10px;
   }
 }
